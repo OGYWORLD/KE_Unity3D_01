@@ -15,7 +15,7 @@ public class C_MoveCube : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // MoveSmaple_01();
+        // MoveSmaple_01();
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class C_MoveCube : MonoBehaviour
         //MoveSmaple_02();
 
         MoveSample_03();
+        CubeJump();
     }
 
     void MoveSmaple_01()
@@ -46,7 +47,7 @@ public class C_MoveCube : MonoBehaviour
         //this.transform.position = pos;
 
         // ==========
-        
+
         // 로컬
         float moveDelta = this.moveSpeed * Time.deltaTime;
         this.transform.Translate(Vector3.forward * moveDelta); // 정규화 벡터의 forward
@@ -119,29 +120,47 @@ public class C_MoveCube : MonoBehaviour
         cubePosition.x += fDeltaX * 5.0f * Time.deltaTime;
         cubePosition.z += fDeltaZ * 5.0f * Time.deltaTime;
 
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             cubePosition.x -= 5.0f * Time.deltaTime;
         }
 
-        else if(Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             cubePosition.x += 5.0f * Time.deltaTime;
         }
 
-        else if(Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow))
         {
             cubePosition.z += 5.0f * Time.deltaTime;
         }
 
-        else if(Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
             cubePosition.z -= 5.0f * Time.deltaTime;
         }
 
         cubeObject.transform.position = cubePosition;
+    }
 
-        Debug.LogFormat("{0} {1} {2}", cubePosition.x, cubePosition.y, cubePosition.y);
+    void CubeJump()
+    {
+        if(Input.GetMouseButtonDown(0)) // 왼쪽 마우스
+        {
+            float power = 10.0f;
 
+            Vector3 velocity = new Vector3(0.0f, 0.5f, 0.0f);
+            velocity *= power;
+            this.GetComponent<Rigidbody>().velocity = velocity;
+        }
+
+        if(Input.GetMouseButton(1)) // 오른쪽 마우스
+        {
+            float power = 10.0f;
+
+            Vector3 velocity = new Vector3(0.0f, 2.0f, 0.0f);
+            velocity *= power;
+            this.GetComponent<Rigidbody>().AddForce(velocity); // AddForce는 힘이 누적되기 때문에 마우스에 가해지는 힘만큼 올라감
+        }
     }
 }

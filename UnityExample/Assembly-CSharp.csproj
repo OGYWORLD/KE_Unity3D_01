@@ -62,6 +62,11 @@
     <Compile Include="Assets\Lesson\Script\Example_03.cs" />
     <Compile Include="Assets\Lesson\Script\C_ObjectController.cs" />
     <Compile Include="Assets\Lesson\Script\C_MoveCube.cs" />
+    <Compile Include="Assets\Lesson\Script\RotateCube.cs" />
+    <Compile Include="Assets\Lesson\Script\LookAtTarget.cs" />
+    <Compile Include="Assets\Lesson\Script\PatrolCube.cs" />
+    <Compile Include="Assets\Lesson\Script\CTrackingCube.cs" />
+    <Compile Include="Assets\Lesson\Script\KeyInputControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
