@@ -347,8 +347,13 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Script/CarMoveBack.cs"
-"Assets/Script/CarMoveForward.cs"
+"Assets/Script/BlackBear.cs"
+"Assets/Script/DrivingCar.cs"
+"Assets/Script/DroneRotation.cs"
+"Assets/Script/GunRotation.cs"
+"Assets/Script/HelicopterController.cs"
+"Assets/Script/HelicopterWing.cs"
+"Assets/Script/Patroll.cs"
 "Assets/Script/WheelRotation.cs"
 -langversion:9.0
 

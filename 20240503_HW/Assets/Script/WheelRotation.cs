@@ -7,7 +7,6 @@ public class WheelRotation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -18,6 +17,7 @@ public class WheelRotation : MonoBehaviour
 
     void MakeWheelLotation()
     {
-        this.transform.Rotate(Vector3.up * 60.0f);
+       float CurVelocity = GetComponentInParent<Rigidbody>().velocity.magnitude;
+       this.transform.Rotate(Vector3.up * CurVelocity);
     }
 }

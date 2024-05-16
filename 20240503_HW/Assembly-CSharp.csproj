@@ -56,9 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\CarMoveForward.cs" />
-    <Compile Include="Assets\Script\CarMoveBack.cs" />
+    <Compile Include="Assets\Script\DroneRotation.cs" />
+    <Compile Include="Assets\Script\GunRotation.cs" />
+    <Compile Include="Assets\Script\HelicopterController.cs" />
+    <Compile Include="Assets\Script\HelicopterWing.cs" />
+    <Compile Include="Assets\Script\DrivingCar.cs" />
+    <Compile Include="Assets\Script\BlackBear.cs" />
     <Compile Include="Assets\Script\WheelRotation.cs" />
+    <Compile Include="Assets\Script\Patroll.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
